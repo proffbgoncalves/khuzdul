@@ -1,0 +1,18 @@
+garakh {}
+
+therdul azrumab nota_aprovacao = 6.0;
+
+mahignin {
+    mahignin_aglâb 9600;
+}
+
+igiggin {
+    azrumab nota = 8.5;
+    abkât aprovado = nota >= nota_aprovacao;
+
+    nî aprovado {
+        imhil ikdis_zadkh "Aluno aprovado";
+    } ninral {
+        imhil ikdis_zadkh "Aluno reprovado";
+    }
+}
