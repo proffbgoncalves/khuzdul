@@ -1,0 +1,9 @@
+// Combina operações sobre bits, conversão de tipo e expressões com operadores de prioridades diferentes.
+garakh {}
+adrân<imkib_adrân> inicio;
+mahignin { inicio = imkib_adrân; }
+igiggin {
+    gimon mascara = ra_lakham<8>(0xAC, 0x0F);
+    azrumab media = (azrumab(mascara) + 2.0 * 3.0) / 2.0;
+    abkât valido = media > 0.0 ra lu hahdul fa baktul;
+}

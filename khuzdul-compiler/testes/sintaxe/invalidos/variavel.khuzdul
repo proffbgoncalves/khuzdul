@@ -1,0 +1,5 @@
+garakh {}
+mahignin {}
+igiggin {
+    gimon valor; // A variável local precisa de um valor inicial.
+}

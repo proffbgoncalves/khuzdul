@@ -1,0 +1,14 @@
+// Lê as entradas da placa, escreve nas saídas e espera meio segundo.
+garakh {
+    yamar led = zirak(13) : bazir;
+    jindîn_zudrâ botao = zirak(2);
+    jindîn_khaishu sensor = zirak_khaishu(0);
+    yamar_shâlakbashd motor = zirak(3) : 0;
+}
+mahignin {}
+igiggin {
+    gimon<16> leitura = imkib_khaishu sensor;
+    imhil ikdis_azdâr imkib_azdâr botao du led;
+    imhil ikdis_shâlakbashd motor 128;
+    imhil itdin adrân(1, 2);
+}
