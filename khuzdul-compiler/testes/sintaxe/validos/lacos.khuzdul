@@ -1,0 +1,14 @@
+// Usa as quatro formas de repetição e altera os elementos de um vetor.
+garakh {}
+mahignin {}
+igiggin {
+    [gimon; 3] valores = [1, 2, 3];
+    tur (gimon i = 0; i < 3; i = i + 1) {
+        valores[i] = valores[i] + 1;
+        nî i == 1 { idrinat; }
+    }
+    gimon n = 0;
+    ina n < 3 { n = n + 1; }
+    imihhil { n = n - 1; } ina n > 0;
+    iggin 3 { idrib; }
+}

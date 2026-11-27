@@ -1,0 +1,14 @@
+// A função soma devolve um valor e o procedimento mostrar imprime o resultado.
+garakh {}
+therdul gimon limite = 3;
+amhul gimon soma(gimon a, gimon b) {
+    innik a + b;
+}
+amhul asrâj mostrar(gimon valor) {
+    imhil ikdis_zadkh valor;
+    innik;
+}
+mahignin { mahignin_aglâb 9600; }
+igiggin {
+    imhil mostrar(soma(limite, 1));
+}
