@@ -19,7 +19,7 @@ blocoLoop
 // Recursos
 recurso
     : tipoRecurso ID ASSIGN (DIGITAL_PIN | ANALOG_PIN) LPAREN INT_LITERAL RPAREN
-      (COLON expressao)? SEMI
+      (COLON expressao)? fimInstrucao
     ;
 tipoRecurso
     : INPUT | INPUT_PULLUP | OUTPUT | ANALOG_INPUT | PWM_OUTPUT
@@ -36,13 +36,13 @@ parametro
 // Declarações
 declaracaoGlobal
     : declaracaoConstante
-    | tipo ID (ASSIGN expressao)? SEMI
+    | tipo ID (ASSIGN expressao)? fimInstrucao
     ;
 declaracaoConstante
-    : CONST tipo ID ASSIGN expressao SEMI
+    : CONST tipo ID ASSIGN expressao fimInstrucao
     ;
 declaracaoVariavel
-    : tipo ID ASSIGN expressao SEMI
+    : tipo ID ASSIGN expressao fimInstrucao
     ;
 
 // Tipos
@@ -69,18 +69,18 @@ bloco
     : LBRACE (declaracaoConstante | declaracaoVariavel | comando)* RBRACE
     ;
 comando
-    : atribuicao SEMI
-    | ACTION acao SEMI
-    | SERIAL_BEGIN INT_LITERAL SEMI
+    : atribuicao fimInstrucao
+    | ACTION acao fimInstrucao
+    | SERIAL_BEGIN INT_LITERAL fimInstrucao
     | comandoIf
     | comandoSwitch
     | comandoWhile
     | comandoRepeat
     | comandoDo
     | comandoFor
-    | BREAK SEMI
-    | CONTINUE SEMI
-    | RETURN expressao? SEMI
+    | BREAK fimInstrucao
+    | CONTINUE fimInstrucao
+    | RETURN expressao? fimInstrucao
     ;
 comandoIf
     : IF expressao (TO ID)? bloco (ELSE bloco)?
@@ -98,7 +98,7 @@ comandoRepeat
     : REPEAT expressao bloco
     ;
 comandoDo
-    : DO bloco WHILE expressao SEMI
+    : DO bloco WHILE expressao fimInstrucao
     ;
 comandoFor
     : FOR LPAREN inicioFor? SEMI expressao? SEMI passoFor? RPAREN bloco
@@ -126,6 +126,13 @@ chamada
     ;
 listaExpressoes
     : expressao (COMMA expressao)*
+    ;
+
+// Inspirado na separação de instruções do Swift (antlr/grammars-v4, swift/swift5).
+fimInstrucao
+    : SEMI
+    | {_input.LA(1) == RBRACE}?
+    | {_input.LT(-1).getLine() < _input.LT(1).getLine()}?
     ;
 
 // Expressões
