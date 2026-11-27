@@ -1,0 +1,4 @@
+// O ponto e vírgula separa os comandos e a chave encerra o último.
+garakh {}
+mahignin {}
+igiggin { gimon n = 1; n = n + 1 }

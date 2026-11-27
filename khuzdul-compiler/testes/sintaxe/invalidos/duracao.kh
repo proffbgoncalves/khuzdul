@@ -1,0 +1,5 @@
+garakh {}
+mahignin {}
+igiggin {
+    imhil itdin adrân(1 + 1, 2); // A duração exige dois numerais. Aqui o primeiro é uma expressão.
+}

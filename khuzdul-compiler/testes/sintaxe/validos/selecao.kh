@@ -1,0 +1,11 @@
+// Se a serial fornecer um byte, ibjib escolhe o que fazer com ele.
+garakh {}
+mahignin { mahignin_aglâb 9600; }
+igiggin {
+    nî imkib du valor {
+        ibjib valor {
+            bujbu 0 { imhil ikdis "zero"; }
+            ninral { imhil ikdis_gimon valor; }
+        }
+    } ninral {}
+}
