@@ -8,7 +8,7 @@ public class Main {
     public static void main(String[] args) throws IOException {
         CharStream input;
         if (args.length == 0) {
-            try (java.io.InputStream stream = Main.class.getResourceAsStream("/avaliacao_aluno.khuzdul")) {
+            try (java.io.InputStream stream = Main.class.getResourceAsStream("/avaliacao_aluno.kh")) {
                 if (stream == null) {
                     throw new IOException("Exemplo Khuzdul não encontrado.");
                 }
